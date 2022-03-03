@@ -4,70 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
     <title>Pastelería</title>
   </head>
-  <body>
-    <img src="imagen.png" alt="" />
-    <!-- El cliente de la pastelería necesita ver los diferentes sabores de pasteles, así como los precios de cada uno. -->
-    <h1>House of cake</h1>
-    <h2>El sabor de lo bien hecho</h2>
+  <body class="container">
+    <div class="w-full">
+      <img class="image" src="imagen.png" alt="" />
+    </div>
+    <h2 class="t-center cursiva f40">El sabor de lo bien hecho</h2>
     <form action="">
-      <h3>Sabores disponibles</h3>
-      <table>
-        <tr>
-          <th>Sabor</th>
-          <th>Precio</th>
-        </tr>
-        <tr>
-          <td>Fresa</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td>Chocolate</td>
-          <td>$500</td>
-        </tr>
-        <tr>
-          <td>Vainilla</td>
-          <td>$500</td>
-        </tr>
-      </table>
-      <select name="" id="">
-        <option value="">Escoge el sabor</option>
-        <option value="">Fresa</option>
-        <option value="">Chocolate</option>
-        <option value="">Vainilla</option>
-      </select>
-      <!-- El cliente de la pastelería necesita ver los diferentes adornos con los que se puede decorar el pastel y los precios de cada uno. -->
-      <h3>Adornos para tu pastel</h3>
-      <table>
-        <tr>
-          <th>Decoración</th>
-          <th>Precio</th>
-        </tr>
-        <tr>
-          <td>Velas de edad</td>
-          <td>$50</td>
-        </tr>
-        <tr>
-          <td>Globos de colores</td>
-          <td>$150</td>
-        </tr>
-        <tr>
-          <td>Unicornio miniatura</td>
-          <td>$250</td>
-        </tr>
-        <tr>
-          <td>Adorno de boda</td>
-          <td>$250</td>
-        </tr>
-      </table>
-      <select name="" id="">
-        <option value="">Escoge un adorno</option>
-        <option value="">Velas de edad</option>
-        <option value="">Globos de colores</option>
-        <option value="">Unicornio miniatura</option>
-        <option value="">Adorno de boda</option>
-      </select>
+      <div class="m-1">
+        <!-- pastel -->
+        <!-- El cliente de la pastelería necesita ver los diferentes sabores de pasteles, así como los precios de cada uno. -->
+        <div class="w-100">
+          <h3 class="cursiva">Sabores disponibles</h3>
+          <table class="table">
+            <tr>
+              <th class="t-l cursiva">Sabor</th>
+              <th class="t-r cursiva">$</th>
+            </tr>
+            <tr>
+              <td>Fresa</td>
+              <td class="t-r">$500 <input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>Chocolate</td>
+              <td class="t-r">$500 <input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>Vainilla</td>
+              <td class="t-r">$500 <input type="checkbox" /></td>
+            </tr>
+          </table>
+        </div>
+        <!-- El cliente de la pastelería necesita ver los diferentes adornos con los que se puede decorar el pastel y los precios de cada uno. -->
+        <div class="w-100">
+          <h3 class="cursiva">Adornos para tu pastel</h3>
+          <table class="table">
+            <tr>
+              <th class="t-l cursiva">Decoración</th>
+              <th class="t-r cursiva">$</th>
+            </tr>
+            <tr>
+              <td>Velas de edad</td>
+              <td class="t-r">$50 <input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>Globos de colores</td>
+              <td class="t-r">$150 <input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>Unicornio miniatura</td>
+              <td class="t-r">$250 <input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>Adorno de boda</td>
+              <td class="t-r">$250 <input type="checkbox" /></td>
+            </tr>
+          </table>
+        </div>
+        <!-- datos -->
+        <div class="mt-5 mb-5">
+          <h3 class="cursiva">Tus datos</h3>
+          <!-- Nombre -->
+          <input class="w-100 input-custom" type="text" placeholder="Nombre" />
+          <!-- Cel y correro -->
+          <div class="grid-col-2">
+            <div class="w-100">
+              <input
+                class="w-100 input-custom"
+                type="tel"
+                placeholder="Teléfono"
+              />
+            </div>
+            <div class="w-100">
+              <input
+                class="w-100 input-custom"
+                type="email"
+                placeholder="Correo"
+              />
+            </div>
+          </div>
+          <!-- Detalle -->
+          <textarea
+            placeholder="Descripción de tu pastel"
+            class="input-custom w-100"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+        <button class="generar" type="submit">Generar Orden</button>
+      </div>
     </form>
+    <!-- Total -->
+    <div class="total">
+      <p class="cursiva">Total: $0</p>
+    </div>
   </body>
 </html>
