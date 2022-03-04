@@ -71,6 +71,12 @@ td {
 .f40 {
   font-size: 40px;
 }
+.f30 {
+    font-size: 30px;
+  }
+.f25 {
+    font-size: 25px;
+  }
 .flex {
   display: flex;
 }
@@ -102,12 +108,6 @@ td {
     var(--input-focus-s),
     var(--input-focus-l)
   );
-}
-
-.grid-col-2 {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1%;
 }
 .generar {
   width: 100%;
